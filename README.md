@@ -1,2 +1,2 @@
 # nurseryRhymes
-algorithmic versions of some nursery rhymes
+algorithmic storytelling: computational creative versions of some nursery rhymes
