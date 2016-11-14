@@ -1,0 +1,125 @@
+img{
+  position : relative;
+  float : left;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+#ground{
+  position : absolute;
+  width : 480px;
+  height : 2px;
+  margin-top : 390px;
+  margin-left : 10px;
+  background-color : rgb(0, 0, 0);
+}
+.hidden{
+  display : none;
+}
+#oldWoman{
+  position : absolute;
+  width : 400px;
+  height : 270px;
+  margin-top :  140px;
+  margin-left : 40px;
+  border : 0px solid rgb(255, 0, 0);
+}
+#oldWomanHead{
+  position : relative;
+  width : 30px;
+  height : 30px;
+  background-color : white;
+  padding : 0px;
+  margin: 0 auto;
+  border : 3px solid rgb(0, 0, 0);
+  border-radius : 80%;
+  z-index: 2;
+}
+#oldWomanStomach{
+  position : absolute;
+  width : 5px;
+  height : 20px;
+  background-color : white;
+  padding : 15px;
+  border : 1px solid rgb(0, 0, 0);
+  border-radius : 40%;
+  overflow : hidden;
+}
+#oldWomanTorso{
+  position : relative;
+  width : 35px;
+  height : 210px;
+  background-color : white;
+  margin :  -15px auto 0px auto;
+  padding : 5px;
+  border : 2px solid rgb(0, 0, 0);
+  border-radius : 20%;
+}
+#oldWomanFootL{
+  position : absolute;
+  width : 3px;
+  height : 10px;
+  padding : 2px;
+  margin-top :  -3px;
+  margin-left : 190px;
+  background-color : white;
+  border : 1px solid rgb(0, 0, 0);
+  border-radius : 20%;
+}
+#oldWomanFootR{
+  position : absolute;
+  width : 3px;
+  height : 10px;
+  padding : 2px;
+  margin-top :  -3px;
+  margin-left : 200px;
+  background-color : white;
+  border : 1px solid rgb(0, 0, 0);
+  border-radius : 20%;
+}
+#plotPointContainer{
+  width : 500px;
+  text-align : center;
+  padding: 10px;
+  margin-left: 10px;
+}
+#referenceImg{
+  position : relative;
+  width : 90%;
+  min-height : 50px;
+  margin-top : 50px;
+  padding : 10px;
+  background-color : white;
+  border : 1px solid rgba(0, 0, 0, 0.3);
+}
+.referencePhrases{
+  width: 500px;
+  margin:10px;
+  padding:10px;
+}
+#storyWorld{
+  position : relative;
+  width : 500px;
+  height : 400px;
+  background-color : white;
+  margin-top :  20px;
+  margin-left : 10px;
+  padding : 10px;
+  border : 1px solid rgb(0, 0, 0);
+}
+#whatHappensNext{
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 5px auto;
+  color : rgba(0, 0, 0, 1);
+}

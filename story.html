@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Old Woman Who Swallowed A Fly</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="storyWorld">
+    <div id="ground">&nbsp;</div>
+    <div id = "oldWoman">
+      <div id = "oldWomanHead"></div>
+      <div id = "oldWomanTorso">
+          <div id = "oldWomanStomach">
+          </div>
+      </div>
+      <div id = "oldWomanFootR"></div>
+      <div id = "oldWomanFootL"></div>
+    </div>
+  </div> 
+  <div id = "plotPointContainer">
+    <button id="whatHappensNext"><em>What happens next?</em></button>
+  </div>
+  <div id = "referenceImg" class="clearfix">
+    <img class = "fly" src="images/fly.jpg" width = "15" height = "10" alt = "fly">
+    <img class = "spider" src="images/spider.jpg" width = "42" height = "30" alt = "spider">
+    <img class = "bird" src="images/bird.jpg" width = "50" height = "42" alt = "bird">
+    <img class = "cat" src="images/cat.jpg" width = "82" height = "45" alt = "cat">
+    <img class = "dog" src="images/dog.jpg" width = "107" height = "50" alt = "dog">
+    <img class = "goat" src="images/goat.jpg" width = "96" height = "75" alt = "goat">
+    <img class = "cow" src="images/cow.jpg" width = "250" height = "126" alt = "cow">
+    <img class = "horse" src="images/horse.jpg" width = "173" height = "200" alt = "horse">
+  </div>
+  <script type="text/javascript" src="swallow.js"></script>
+  <script type="text/javascript" src="die.js"></script>
+  <script type="text/javascript">
+  
+  //write a function to select a DOM element
+  var eleAssign = function(element){return document.querySelector(element);};
+
+  //create variables to represent elements of the Old Woman node
+  var oldWoman = eleAssign("#oldWoman");
+  var oldWomanHead = eleAssign("#oldWomanHead");
+  var oldWomanFootR = eleAssign("#oldWomanFootR");
+  var oldWomanFootL = eleAssign("#oldWomanFootL");
+  var old_womanTorso = eleAssign("#oldWomanTorso");
+  var old_womanTummy = eleAssign("#oldWomanStomach");
+
+  //create variables for the reference library of images to be used
+  var creatureLibrary = eleAssign("#referenceImg");
+  var total_animal_images = creatureLibrary.getElementsByTagName("img");
+
+  //create a variable for the button that will allow the Participant to call the next 'part of the story'
+  var plotPointContainer = eleAssign("#plotPointContainer");
+  var whatHappensNext = eleAssign("#whatHappensNext");
+
+  //create an array of all of the things the old woman will swallow
+  var swallowList = ["fly", "spider", "bird", "cat", "dog", "goat", "cow", "horse"];
+
+  //in this story the parent element 'oldWoman' will swallow some creatures
+  //at some point in the story, there is the ultimate crisis that changes the life of the Old Woman forever
+    
+
+  //write an event listener that waits for the Human to click it
+  whatHappensNext.addEventListener("click", function(){
+    swallow(swallowList[0]); 
+    if(swallowList.length!=1){
+      swallowList.shift();
+    }
+    else{
+      plotPointContainer.removeChild(whatHappensNext);
+      plotPointContainer.innerHTML="<strong>The End</strong> <br><br> Now you change this version";
+      plotPointContainer.style.fontSize="18px";
+      document.body.removeChild(creatureLibrary);
+    }
+  });
+
+</script>
+
+</body>
+</html>
