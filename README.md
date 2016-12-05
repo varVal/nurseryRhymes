@@ -1,6 +1,8 @@
-|id     |column 1   |column 2   |
+|id|column 1|column 2|
 |----------|----------|-----------|
 |int       |string    |string     |
+|12323|animalsGreat|pink|
+|1|up|pink umbrellas|
 
 # nurseryRhymes
 algorithmic storytelling: computational creative versions of some nursery rhymes
